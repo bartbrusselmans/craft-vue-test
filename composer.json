@@ -1,0 +1,12 @@
+{
+    "name": "glue/craft3-boilerplate",
+    "description": "Starting point for new projects in Craft 3",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jan",
+            "email": "jan@glue.be"
+        }
+    ],
+    "require": {}
+}
