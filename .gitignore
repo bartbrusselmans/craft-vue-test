@@ -1,0 +1,92 @@
+# Created by https://www.gitignore.io/api/sublimetext,osx,node,bower,craftcms
+
+### SublimeText ###
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace files are user-specific
+*.sublime-workspace
+
+# project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using SublimeText
+# *.sublime-project
+
+# sftp configuration file
+sftp-config.json
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+
+
+### CraftCMS ###
+# Craft Storage (cache) [http://buildwithcraft.com/help/craft-storage-gitignore]
+/craft/storage/*
+!/craft/storage/rebrand*
+
+### CraftCMS 3 ###
+/.env
+/.idea
+/vendor
+
+### Our uploads ###
+public_html/assets/uploads*
+public_html/assets/files*
+public_html/assets/_files*
+public_html/imager*
+.idea
