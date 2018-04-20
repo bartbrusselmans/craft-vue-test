@@ -1,0 +1,30 @@
+{% minify %}
+{#
+ # File for general config items
+#}
+
+
+{# Settings#}
+{% set wireframes = true %}
+{% set styleguide = false %}
+
+{# set Locale #}
+{% set locale = craft.app.language %}
+
+{# Css file based on wireframes #}
+{% set cssFile = '' %}
+{% if wireframes %}
+	{% set cssFile =  rev('css/wireframes.css') %}
+{% else %}
+	{% set cssFile =  rev('css/app.css') %}
+{% endif %}
+
+{% set cssPath = '<link rel="stylesheet" type="text/css" href="' ~  cssFile ~ '">' %}
+
+{# SVG #}
+{% set svgFile = rev('svg/svg-sprite.svg') %}
+{% endminify %}
+
+{# Base Block#}
+{% block base %}
+{% endblock %}

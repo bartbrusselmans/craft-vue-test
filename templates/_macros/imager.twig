@@ -1,0 +1,108 @@
+{% macro regular(image, transform, class, url) %}
+	{% if image %}
+		{% if (craft.config.environment == 'local') or url == true  %}
+			{% set image = image.url %}
+		{% endif %}
+
+		{# set Default configs #}
+		{% set defaults = {
+			format: null,
+			interlace: true,
+			mode: 'crop'
+		} %}
+		{# set low quality config configs #}
+		{% set lowQ = {
+			format: null,
+			interlace: true,
+			mode: 'crop',
+			jpegQuality:5,
+			pngCompressionLevel:0
+		} %}
+
+		{# Check for focal points #}
+		{% if (craft.config.environment != 'local') and (image['focusX'] is defined)  %}
+			{# <p>focus point</p>
+			<p>{{ image.focusPctX ~ '% ' ~ image.focusPctY ~ '%' }}</p> #}
+			{% set defaults = defaults|merge({
+				position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%'
+ 			}) %}
+			{% set lowQ = lowQ|merge({
+				position: image.focusPctX ~ '% ' ~ image.focusPctY ~ '%'
+ 			}) %}
+		{% endif %}
+		{# Make low and high quality transformations #}
+		{% set transformed = craft.imager.transformImage(image, transform, defaults) %}
+		{% set lowQtransformed = craft.imager.transformImage(image,transform, lowQ) %}
+		{%- if transform|first is not iterable -%}
+			<img 	src="{{ lowQtransformed.url }}"
+						data-src="{{transformed.url}}"
+						width="{{ transformed.width }}"
+						height="{{ transformed.height }}"
+						alt="{{ (image is iterable) ? image.title : '' }}"
+						class="lazyload {% if class %}{{class}}{% endif %}"
+			/>
+		{%- else -%}
+			<picture>
+				<source sizes="100vw" srcset="{{ craft.imager.srcset(transformed) }}">
+				<img 	src="{{ craft.imager.base64Pixel(2,1) }}"
+				   		sizes="100vw"
+				   		data-srcset="{{ craft.imager.srcset(transformed) }}"
+				   		alt="{{ (image is iterable) ? image.title : '' }}"
+							class="lazyload {% if class %}{{class}}{% endif %}"
+				/>
+			</picture>
+		{% endif %}
+	{% endif %}
+{% endmacro %}
+
+{% macro background(image, transform) %}
+	{% if image %}
+		{% if craft.config.environment == 'local' %}
+			{% set image = image.url %}
+		{% endif %}
+
+		{% set defaults = {
+			format: null,
+			interlace: true,
+			mode: 'crop'
+		} %}
+
+		{% set hasFocusPoint = false %}
+		{% if (craft.config.environment != 'local') and (image['focusX'] is defined)  %}
+			{% set hasFocusPoint = true %}
+		{% endif %}
+		{% set transformed = craft.imager.transformImage(image, transform, defaults) %}
+		{%- if hasFocusPoint -%}
+style="background-image:url({{ transformed.url }});background-size: cover;background-position: {{ image.focusPctX }}% {{ image.focusPctY }}%;""
+		{%- else -%}
+style="background-image:url({{ transformed.url }});"
+		{% endif %}
+	{% endif %}
+{% endmacro %}
+
+{% macro backgroundLazy(image, transform) %}
+	{% if image %}
+		{% if craft.config.environment == 'local' %}
+			{% set image = image.url %}
+		{% endif %}
+		{% set defaults = {
+			format: null,
+			interlace: true,
+			mode: 'crop'
+		} %}
+
+		{% set lowQ = {
+			format: null,
+			interlace: true,
+			mode: 'crop',
+			jpegQuality:5,
+			pngCompressionLevel:0
+		} %}
+
+	{% set transformed = craft.imager.transformImage(image, transform, defaults) %}
+	{% set lowQtransformed = craft.imager.transformImage(image,transform, lowQ) %}
+	{% spaceless %}
+style="background-image:url({{ lowQtransformed.url }});"  data-bg="{{transformed.url}}"
+	{% endspaceless %}
+	{% endif %}
+{% endmacro %}

@@ -1,0 +1,107 @@
+{% macro make(nav) %}
+	{% if craft.request.getParam('category_key') %}
+		{% set active_menu = craft.request.getParam('category_key') %}
+	{% else %}
+		{% set active_menu = '' %}
+	{% endif %}
+	{% set shopLink = craft.config.environmentVariables.shopLink %}
+<ul class="main-nav__list">
+	{% for node in nav %}
+		{%- if node.level == 1 -%}
+		<li class="main-nav__list-item {% if node.hasChildren %}js-flyout-trigger{% endif %}">
+			<a href="{{ node.url|replace('{shopLink}', shopLink) }}" {% if node.blank %}target="_blank" rel="noopener" {% endif %}class="main-nav__link {{ ((node.name|lower == active_menu) or (node.name|lower == craft.request.firstSegment)) ? 'main-nav__link--active' }}">{{ node.name }}
+        {% if node.hasChildren %}<svg width="8" height="6" class="main-nav__icon"><use xlink:href="#arrow-down" /></svg>{% endif %}
+	    </a>
+			{# if children #}
+			{% if node.hasChildren %}
+				<div class="flyout">
+					<div class="row">
+						{% set itemCount = node.children|length %}
+						{% for subnode in node.children %}
+							{% if subnode.hasChildren %}
+								<div class="two columns">
+									<h3 class="flyout__title">
+										<a href="{{ subnode.url|replace('{shopLink}', shopLink) }}" class="flyout__link">{{ subnode.name }}</a>
+									</h3>
+									<ul class="flyout__list">
+										{% for sub2node in subnode.children %}
+											<li>
+												<a href="{{ sub2node.url|replace('{shopLink}', shopLink) }}" class="flyout__link">{{ sub2node.name }}</a>
+											</li>
+										{% endfor %}
+									</ul>
+								</div>
+							{% else %}
+								{% set breakpoint = (itemCount / 5)|round(0,'ceil') %}
+								{% if loop.index == 1 %}
+								<div class="columns two">&nbsp;</div>
+								<div class="columns two">
+									<ul class="flyout__list">
+										<li><a href="{{ subnode.url|replace('{shopLink}', shopLink) }}" class="flyout__link">{{ subnode.name }}</a></li>
+								{% elseif (loop.index % breakpoint) == 0 %}
+										<li><a href="{{ subnode.url|replace('{shopLink}', shopLink) }}" class="flyout__link">{{ subnode.name }}</a></li>
+									</ul>
+								</div>
+								<div class="columns two">
+									<ul class="flyout__list">
+								{% elseif loop.index == itemCount %}
+										<li><a href="{{ subnode.url|replace('{shopLink}', shopLink) }}" class="flyout__link">{{ subnode.name }}</a></li>
+									</ul>
+								</div>
+								{% else %}
+									<li><a href="{{ subnode.url|replace('{shopLink}', shopLink) }}" class="flyout__link">{{ subnode.name }}</a></li>
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+			 {#end if children#}
+		</li>
+		{%- endif -%}
+	{% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro makeMobile(nav) %}
+	{# {% if craft.request.getParam('category_key') %}
+	    {% set active_menu = craft.request.getParam('category_key') %}
+	{% else %}
+	    {% set active_menu = '' %}
+	{% endif %} #}
+	{% set shopLink = craft.config.environmentVariables.shopLink %}
+	<nav class="mobile-multi-level">
+		<ul class="menu__root">
+			{% for node in nav %}
+		 		<li class="menu__item">
+					<a class="menu__link menu__link--parent" href="{{node.url|replace('{shopLink}', shopLink)}}">{{node.name}} {% if node.hasChildren %}<svg width="12" height="8" class="mobile-nav__next-icon"><use xlink:href="#arrow-toggle" /></svg>{% endif %}</a>
+						{# if children #}
+						{% if node.hasChildren %}
+							<ul class="menu__sub">
+								<li class="menu__item menu__item--back">
+									<a class="menu__back-link" href="#"><svg width="12" height="8" class="mobile-nav__back-icon"><use xlink:href="#arrow-toggle" /></svg> {{'Back'|t}}</a>
+								</li>
+					 			{% for subnode in node.children %}
+									<li class="menu__item">
+										<a class="menu__link menu__link--parent" href="{{subnode.url|replace('{shopLink}', shopLink)}}">{{subnode.name}}</a>
+										{% if subnode.hasChildren %}
+											<ul class="menu__sub">
+												<li class="menu__item menu__item--back">
+													<a class="menu__back-link" href="#"><svg width="12" height="8" class="mobile-nav__back-icon"><use xlink:href="#arrow-toggle" /></svg> {{'Back'|t}}</a>
+												</li>
+												{% for child in subnode.children %}
+													<li class="menu__item">
+														<a class="menu__link" href="{{child.url|replace('{shopLink}', shopLink)}}">{{child.name}}</a>
+													</li>
+												{% endfor %}
+											</ul>
+										{% endif %}
+									</li>
+			 					{% endfor %}
+							</ul>
+						{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+{% endmacro %}

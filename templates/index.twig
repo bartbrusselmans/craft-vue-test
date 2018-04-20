@@ -1,0 +1,30 @@
+{% extends "_layouts/site" %}
+{# {% import '_macros/imager' as images %}
+{% import '_macros/critical' as critical %} #}
+
+{% block inlineCss %}
+	{# <style type="text/css">
+		{% set templateName = _self.getTemplateName() %}
+		{{critical.css(templateName)}}
+	</style> #}
+{% endblock %}
+
+{% block jsFiles %}
+	'{{rev('js/app.js')}}'
+{% endblock %}
+
+{% block main %}
+	<h1>Craft 3 - Ow yeah</h1>
+	{% profile "images" %}
+		{% set img = test.image[0] ?? null %}
+		{% set transform = img.transformImage  %}
+		{% if transform %}
+			<img src="{{ transform.placeholderSilhouette() }}"
+				srcset="{{ transform.srcset() }}"
+				alt="{{img.title}}"
+			 	sizes="100vw"
+				class="lazyload"
+			/>
+		{% endif %}
+	{% endprofile %}
+{% endblock %}

@@ -1,0 +1,6 @@
+{% macro css(templateName) %}
+	{% if templateName  == '' %}
+		{% set templateName = 'index' %}
+	{% endif %}
+	{{ source ( templateName ~ '_critical.min.css', ignore_missing = true) }}
+{% endmacro %}

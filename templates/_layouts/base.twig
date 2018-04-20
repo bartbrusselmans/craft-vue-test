@@ -1,0 +1,68 @@
+{% extends "_layouts/settings" %}
+{% block base %}
+<!DOCTYPE html>
+{% minify %}
+	{% set fontsLoaded = getCookie('FONTS_LOADED') %}
+	{# check for cookies & caches fonts #}
+	{% if fontsLoaded == '1' %}
+		<html class="fonts-loaded" lang="{{ locale }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+	{% else %}
+		<html lang="{{ locale }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+	{% endif %}
+	<head>
+		{% block head %}
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link type="text/plain" rel="author" href="/humans.txt" />
+			{# Favicon #}
+			{% include '_components/favicon' %}
+			{# Critical CSS #}
+			{# Check for a critical cookie, otherwise set one and ignore critical css for one week #}
+			{% set cacheVal = getCookie('CRITICAL_CSS') %}
+			{% if not cacheVal or cacheVal != cssFile or craft.app.config.general.devMode %}
+				{{ setCookie('CRITICAL_CSS', cssFile|t|raw , now | date_modify("+7 days").timestamp ) }}
+				{% block inlineCss %}{% endblock %}
+				<link rel="preload" href="{{cssFile|raw}}" as="style" onload="this.rel='stylesheet'">
+				<noscript><link rel="stylesheet" href="{{cssFile}}"></noscript>
+				<script>
+					{{ source('_inlinejs/cssrelpreload.min.js') }}
+					{{ source('_inlinejs/loadcss.min.js') }}
+				</script>
+			{% else %}
+				<link rel="stylesheet" href="{{cssFile}}">
+			{% endif %}
+			{# Site Fonts #}
+			{# Check for fontsloaded cookie, if not set, load the fonts with fontfaceobserver and set cookie #}
+			<style>{% include "_inlinecss/fonts.css" %}</style>
+			{% if not fontsLoaded == '1' %}
+				<script>
+				{{ source("_inlinejs/cookies.min.js") }}
+				{{ source("_inlinejs/fontfaceobserver.min.js") }}
+				{{ source("_inlinejs/asyncfonts.min.js") }}
+				</script>
+			{% endif %}
+			{# picture polyfill #}
+			<script>
+				{{ source("_inlinejs/picturefill.min.js") }}
+			</script>
+			{# SEOmatic #}
+		{% endblock %}
+	</head>
+	<body>
+		<div id="svgSprite" class="hide" data-file="{{svgFile}}"></div>
+		<div class="container">
+			{% block body %}{% endblock %}
+		</div>
+		{# Javascript Async #}
+		{% include '_inlinejs/loadjs.min.js'%}
+		<script>loadjs(['/assets/js/standalone/lazysizes.min.js',{% block jsFiles %}{% endblock %}],{success: function() {console.log('js loaded');}});</script>
+		<script>
+				var CRAFT_ENV = '{{ craft.app.config.general.custom.craftEnv }}';
+				{% set shopUrl = craft.app.config.general.custom.shopLink %}
+				{% if shopUrl is defined %}
+					var MAGENTO_LINK = '{{ shopUrl }}';
+				{% endif %}
+		</script>
+	</body>
+</html>
+{% endminify %}
+{% endblock %}
