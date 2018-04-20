@@ -1,0 +1,105 @@
+@media ($mega-menu-bp1) {
+    .menu {
+        border: 1px solid #b2b2b2;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: (20/14);
+        color: #444;
+        background-color: #d4d4d4;
+        background-image: linear-gradient(to bottom, #e0e0e0, #c8c8c8);
+        border-radius: 3px;
+        box-shadow: inset 0 1px #f4f4f4, inset 0 -2px #b3b3b3, 0 1px 3px #ddd;
+    }
+
+    .menu__root > .menu__item {
+        border-right: 1px solid rgba(#000, .1);
+    }
+
+    .menu__root > .menu__item--right {
+        border-right: none;
+        border-left: 1px solid rgba(#000, .1);
+    }
+
+    .menu__root > .menu__item > .menu__link {
+        display: block;
+        padding: 1em 1.25em;
+        padding-bottom: calc(1em + 1px);
+        border-left: 1px solid rgba(#fff, .35);
+        font-weight: bold;
+        text-shadow: 0 1px #f8f8f8;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .menu__root > .menu__item:hover > .menu__link {
+        background-color: #fff;
+        background-image: linear-gradient(to bottom, #f5f5f5, #fff);
+        box-shadow: inset 0 3px #eee;
+    }
+
+    .menu__sub,
+    .menu__mega {
+        left: -1px;
+        background-color: #fff;
+        border: 1px solid #b3b3b3;
+        border-top: none;
+        box-shadow: 0 2px 1px #ddd;
+    }
+
+    .menu__sub .menu__sub {
+        .menu__item:first-child > .menu__link,
+        .menu__item--back + .menu__item > .menu__link {
+            border-top-color: #b3b3b3;
+        }
+    }
+
+    .menu__item--right .menu__sub,
+    .menu__item--right .menu__mega {
+        left: auto;
+        right: -1px;
+    }
+
+    .menu__sub .menu__link {
+        display: block;
+        padding: .7em .9em;
+        border-top: 1px solid #e4e4e4;
+        color: #666;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 18px;
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+    }
+
+    .menu__sub .menu__bubble {
+        position: absolute;
+        right: 10px;
+        padding: 1px 4px;
+        font-size: 11px;
+        line-height: 14px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+    }
+
+    .menu__root > .menu__item > .menu__link .menu__bubble {
+        position: relative;
+        top: -1px;
+        margin-left: 4px;
+        padding: 1px 4px;
+        background-color: #df0a0a;
+        color: #fff;
+        text-shadow: 0 1px #9d0707;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.4), 0 1px #f1f1f1;
+        font-size: 11px;
+        line-height: 11px;
+        border-radius: 3px;
+    }
+
+    .menu__root > .menu__item > .menu__link .menu__bubble--alt {
+        background-color: #737373;
+        text-shadow: 0 1px #505050;
+    }
+}

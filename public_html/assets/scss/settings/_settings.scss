@@ -1,0 +1,29 @@
+@import "colors";
+
+$rowWidth: 1140px;
+$columnGutter: 30px;
+$totalColumns: 12;
+$gridAlign: center; // left | center | right
+
+$phone: '(max-width: 480px)';
+$phablet: '(min-width: 481px) and (max-width: 767px)';
+$phabletAndSmaller: '(max-width: 767px)';
+$phabletAndUp:  '(min-width:767px)';
+$tablet: '(min-width: 768px) and (max-width: 1023px)';
+$tabletAndSmaller: '(max-width: 1023px)';
+$desktop: '(min-width: 1024px)';
+
+$margin: 25px;
+$margin-small: 15px;
+$margin-large: 55px;
+
+$default-border-radius: 3px;
+
+$button-height: 40px;
+$button-border-width: 2px;
+
+$fontSmoothing: antialiased;
+$baseFontSize: 16;
+$baseLineHeight: 26;
+
+$inputHeight: 40px;

@@ -1,0 +1,84 @@
+// Set global susy config item
+$susy: (
+	flow: ltr,
+	math: fluid,
+	output: float,
+	gutter-position: inside-static,
+	container: $rowWidth,
+	container-position: $gridAlign,
+	columns: $totalColumns,
+	gutters: $columnGutter/($rowWidth/$totalColumns),
+	column-width: $rowWidth/$totalColumns,
+	global-box-sizing: content-box,
+	last-flow: to,
+	debug: (
+		image: hide,
+		color: rgba(#66f, .25),
+		output: background,
+		toggle: top right,
+	),
+	use-custom: (
+		background-image: true,
+		background-options: false,
+		box-sizing: true,
+		clearfix: false,
+		rem: true,
+	)
+);
+
+
+*, *:before, *:after { box-sizing: border-box; }
+// .container { min-width: 1024px; }
+
+.row {
+	position: relative;
+	@include container();
+	&.collapsed > .columns {
+		padding: 0;
+	}
+	&.collapsed .row {
+		margin: 0;
+	}
+	&.full{
+		width:100%;
+		max-width:100%;
+	}
+	&.block{
+		margin-top:$margin;
+		margin-bottom: $margin;
+	}
+	.row {
+		width: auto;
+		min-width: 0;
+		margin: 0 (-($columnGutter/2));
+		&.collapsed {
+			margin: 0;
+		}
+	}
+}
+
+.columns {
+	float: left;
+	&.one { width: span(1); @include gutters(); }
+	&.two { width: span(2); @include gutters(); }
+	&.three { width: span(3); @include gutters(); }
+	&.four { width: span(4); @include gutters(); }
+	&.five { width: span(5); @include gutters(); }
+	&.six { width: span(6); @include gutters(); }
+	&.seven { width: span(7); @include gutters(); }
+	&.eight { width: span(8); @include gutters(); }
+	&.nine { width: span(9); @include gutters(); }
+	&.ten { width: span(10); @include gutters(); }
+	&.eleven { width: span(11); @include gutters(); }
+	&.twelve { width: span(12); @include gutters(); }
+	@media #{$phabletAndSmaller} {
+		width: 100% !important;
+		float: none !important;
+		padding-left: $columnGutter/2 !important;
+		padding-right: $columnGutter/2 !important;
+		margin-left: 0 !important;
+	}
+}
+
+.columns--centered { margin: 0 auto !important; float: none !important; }
+.columns--collapsed { padding: 0; }

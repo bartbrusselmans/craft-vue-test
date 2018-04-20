@@ -1,0 +1,124 @@
+$mega-menu-bp0-only: 'max-width: 699px';
+$mega-menu-bp1: 'min-width: 700px';
+
+/**
+ * Wrapper element
+ */
+.menu {
+    max-width: 300px;
+    overflow: hidden;
+
+    @media ($mega-menu-bp1) {
+        max-width: none;
+        overflow: visible;
+    }
+}
+
+    /**
+     * Put this first so we can overrule the transform for desktop
+     * later on in a media query.
+     */
+    @for $i from 0 through 9 {
+        .menu__root--depth-#{$i} {
+            transform: translateX(-100% * $i);
+        }
+    }
+
+    /**
+     * Root list
+     */
+    .menu__root {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media ($mega-menu-bp1) {
+            display: flex;
+            transform: none;
+        }
+    }
+
+        .menu__item {
+            @media ($mega-menu-bp1) {
+                position: relative;
+            }
+        }
+
+        /**
+         * 1. Only the first occurence of this class should
+         * have the margin.
+         */
+        .menu__item--right {
+            @media ($mega-menu-bp1) {
+                margin-left: auto; /* 1 */
+
+                & ~ & {
+                    margin-left: 0; /* 1 */
+                }
+            }
+        }
+
+        .menu__item--back {
+            @media ($mega-menu-bp1) {
+                display: none;
+            }
+        }
+
+            .menu__back-link {
+                @media ($mega-menu-bp1) {
+                    display: none;
+                }
+            }
+
+    /**
+     * Sub list
+     */
+    .menu__sub,
+    .menu__mega {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        display: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+
+        @media ($mega-menu-bp1) {
+            top: 100%;
+            left: 0;
+            width: 150px;
+        }
+
+        &.is-active {
+            display: block;
+        }
+
+        & & {
+            @media ($mega-menu-bp1) {
+                top: 0;
+                left: 100%;
+            }
+        }
+
+        .menu__item:hover > & {
+            @media ($mega-menu-bp1) {
+                display: block;
+            }
+        }
+
+        .menu__item--right & {
+            @media ($mega-menu-bp1) {
+                left: auto;
+                right: 0;
+            }
+        }
+
+        .menu__item--right & & {
+            @media ($mega-menu-bp1) {
+                left: auto;
+                right: 100%;
+            }
+        }
+    }

@@ -1,0 +1,52 @@
+.left { float: left !important; }
+
+.right { float: right !important; }
+
+.hide { display: none !important; }
+
+.show-for-phone {
+	display: none !important;
+	@media #{$phone} {
+		display: inherit !important;
+	}
+}
+
+.hide-for-phone {
+	@media #{$phone} {
+		display: none !important;
+	}
+}
+
+.text--left { text-align: left !important; }
+
+.text--right { text-align: right !important; }
+
+.text--center { text-align: center !important; }
+
+.text--spread {
+	display: flex;
+	justify-content: space-between;
+}
+
+.text--upper { text-transform: uppercase !important; }
+
+.text--underline { text-decoration: underline !important; }
+
+.no-margin { margin: 0 !important; }
+
+.inline-list{
+	@include inline-list();
+}
+.list{
+	@include listing();
+}
+
+.cf {
+	@include cf();
+}
+
+.v-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}

@@ -1,0 +1,30 @@
+<svg id="1edb573b-b421-4f29-9da9-b645af9aa14c" class="svg-icon-logo" data-name="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.71 51.13">
+  <defs>
+    <style>
+      .\30 8894d45-9795-4672-baf1-647afc040fec, .\31 7416301-b351-4209-9ed3-a04149ae7e00 {
+        isolation: isolate;
+        font-family: Muli;
+      }
+
+      .\30 8894d45-9795-4672-baf1-647afc040fec {
+        font-size: 33px;
+        fill: #2d8eff;
+        font-weight: 700;
+      }
+
+      .\31 7416301-b351-4209-9ed3-a04149ae7e00 {
+        font-size: 18px;
+        fill: #000a12;
+      }
+    </style>
+  </defs>
+  <title>logo-acme</title>
+  <g id="e4814961-1476-4272-a9ae-90dd008528f0" data-name="Wireframes">
+    <g id="90d94c39-4efb-42f4-8751-f477b5779d3e" data-name="homepage">
+      <g id="0b622e5d-b379-48c0-b4c2-247269c9f42b" data-name="header">
+        <text class="08894d45-9795-4672-baf1-647afc040fec" transform="translate(0 28.25)">A<tspan x="24.02" y="0">CME</tspan></text>
+        <text class="17416301-b351-4209-9ed3-a04149ae7e00" transform="translate(0 46.22) scale(1.03 1)">wi<tspan x="19.64" y="0">r</tspan><tspan x="25.74" y="0">ef</tspan><tspan x="41.35" y="0">r</tspan><tspan x="47.45" y="0">ames</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

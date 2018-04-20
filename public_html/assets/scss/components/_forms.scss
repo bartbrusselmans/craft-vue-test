@@ -1,0 +1,293 @@
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+	box-sizing: border-box;
+ 	line-height:1;
+	position: relative;
+	padding: (($button-height - $baseLineHeight) / 2) 10px;
+	margin: 0 0 $margin;
+	width: 100%; height: $inputHeight;
+	background-color: transparent;
+	border: 1px solid $borderColor;
+	outline: none;
+	@include font-size($baseFontSize);
+	color: $txtColor;
+	-webkit-font-smoothing: $fontSmoothing;
+	border-radius: $default-border-radius;
+	&::placeholder{color: lighten($txtColor, 50%); opacity: 1;}
+	&:focus{
+		border-color:$mainColor;
+	}
+	&.input--error{
+		padding-right: $inputHeight + 10px;
+		border-color: $alertColor;
+		background-image: svg-url('<svg fill="#e52931" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.05 70.7"><title>alert</title><path d="M79.1,63.3,44.3,3C42-1,38.1-1,35.8,3L1,63.3c-2.3,4.1-.4,7.4,4.3,7.4H74.9C79.5,70.7,81.4,67.4,79.1,63.3Zm-38.9-.6a5.7,5.7,0,1,1,0-11.4A5.76,5.76,0,0,1,45.9,57,5.7,5.7,0,0,1,40.2,62.7ZM47,25.2l-.8,15.2a6.17,6.17,0,0,1-6,5.7h-.1a6.1,6.1,0,0,1-6-5.7l-1-15.2a5.31,5.31,0,0,1,5.3-5.7h3.3A5.31,5.31,0,0,1,47,25.2Z" transform="translate(-0.02)"/> </svg>');
+		background-repeat: no-repeat;
+		background-position: right 10px center;
+		background-size:$inputHeight/2;
+	}
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+button {
+	-webkit-font-smoothing: $fontSmoothing;
+}
+button,input {
+  overflow: visible;
+}
+textarea { height: auto; }
+
+.input {
+	position: relative;
+}
+
+.input.single-checkbox{
+	margin-bottom:$margin;
+	.input--error ~ label{
+		border:1px solid $alertColor;
+	}
+	.input--error ~ .input--warning{
+		position: absolute;
+		top:auto;
+		bottom:-28px;
+		width: auto;
+		min-width: 200px;
+	}
+}
+
+.checkbox-group{
+	position: relative;
+	margin-bottom:20px;
+	.input--warning{
+		position: absolute;
+		bottom:- calc(1rem/2);
+		top:auto;
+	}
+	input[type="text"]{
+		display: none;
+		position: absolute;
+	}
+}
+.checkbox-group__input.input--error ~ .media-wrapper,
+.checkbox-group__input.input--error ~ .media{
+	.checkbox__v-label {
+		border:1px solid $alertColor;
+	}
+}
+
+// Errors
+.input--warning{
+	color:$alertColor;
+	@include font-size(14);
+	padding: 0;
+	top: -20px;
+	position: relative;
+}
+.input--valid + .input--warning{
+	display: none;
+}
+
+// Freeform errors (list)
+form ul.errors{
+	margin:-20px 0 20px;
+	padding:0;
+	li{
+		color:$alertColor;
+		list-style-type: none;
+		@include font-size(14);
+	}
+}
+
+// Select
+.input--select {
+	position: relative;
+	&:hover { cursor: pointer; }
+	.input__error { display: none; }
+}
+.input__select-arrow {
+	overflow: hidden;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+	background: $mainColor;
+	color: $white;
+	width: $inputHeight; height: $inputHeight;
+	display: block;
+	text-align: center;
+	border-top-right-radius: $default-border-radius;
+	border-bottom-right-radius: $default-border-radius;
+	font-family: sans-serif;
+	line-height: $inputHeight;
+	.lt-ie10 & { border-radius: 0; z-index: 2;  background: $white; }
+}
+.input__select::-ms-expand { display: none; }
+.input__select {
+		@include font-size($baseFontSize);
+		box-shadow: none;
+		border-radius: 0;
+		position: relative;
+		z-index: 1;
+		-webkit-font-smoothing: antialiased;
+		appearance:none;
+    text-indent: 0.01px;
+    text-overflow: '';
+		display: block;
+		width: 100%;
+		height: $inputHeight;
+		margin-bottom: $margin;
+		padding-left: 15px;
+		background: $white;
+		border: 1px solid $borderColor;
+		border-radius: $default-border-radius;
+		color: lighten($txtColor, 50%);
+		&:hover { cursor: pointer; }
+		&.input--error {
+			border: 1px solid $alertColor;
+			padding-right: 77px;
+			+ .input__select-arrow {
+				border: 1px solid $alertColor; border-left: none;
+			}
+		}
+	}
+
+// Checkbox
+.form-checkbox  {
+	$checkboxHeight: 26px;
+	$borderWidth: 1px;
+	position: relative;
+	width: $checkboxHeight;
+	height: $checkboxHeight;
+	margin: 0 8px $margin 0;
+	input[type="checkbox"] {
+		visibility: hidden;
+		&:checked + label:after, &.checked + label:after {
+			content: '';
+			font-family: sans-serif;
+			text-align: center;
+			position: absolute;
+			display: block;
+			margin: 0;
+			top: 0;
+			left: 0;
+			width: $checkboxHeight - ($borderWidth*2);
+			height: $checkboxHeight - ($borderWidth*2);
+			background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.6 29.7" fill="currentColor"> <title>check</title> <path d="M9.86,27.31l2.83,2.83L39.56,3.27,36.73.44ZM0,17.41l9.9,9.9,2.83-2.83-9.9-9.9Z" transform="translate(0.04 -0.44)"/> </svg>');
+			background-repeat: no-repeat;
+			background-position: 3px 3px;
+			background-size: 20px;
+		}
+	}
+	label {
+		position: absolute;
+		top: 4px; left: 0;
+		display: block;
+		padding: 0 5px;
+		width: $checkboxHeight;
+		height: $checkboxHeight;
+		background: transparent;
+		border: $borderWidth solid $borderColor;
+		border-radius: $default-border-radius;
+		cursor: pointer;
+		overflow: hidden;
+	}
+	&.error {
+		label {
+			border-color: $alertColor;
+		}
+	}
+}
+.form-checkbox__label {
+	display: inline-block;
+	margin-top:calc(1rem/4);
+}
+.label--last{
+	margin-bottom:20px;
+}
+// Radio
+.form-radio  {
+	$radioHeight: 26px;
+	$borderWidth: 1px;
+	position: relative;
+	width: $radioHeight;
+	height: $radioHeight;
+	margin: 0 8px $margin 0;
+	input[type="radio"] {
+		visibility: hidden;
+		&:checked + label:after, &.checked + label:after {
+			content: '';
+			position: absolute;
+			display: block;
+			margin: 0;
+			top: 0;
+			left: 0;
+			width: $radioHeight/2;
+			height: $radioHeight/2;
+			background: $mainColor;
+			border-radius: 50%;
+			top:50%;
+			left:50%;
+			transform:translateX(-50%) translateY(-50%);
+		}
+	}
+	label {
+		position: absolute;
+		top: 4px; left: 0;
+		display: block;
+		padding: 0 5px;
+		width: $radioHeight;
+		height: $radioHeight;
+		background: transparent;
+		border-radius: 50%;
+		border: $borderWidth solid $borderColor;
+		cursor: pointer;
+		overflow: hidden;
+	}
+	&.error {
+		label {
+			border-color: $alertColor;
+		}
+	}
+}
+.form-radio__label {
+	padding: 5px 0;
+	cursor: pointer;
+}
+
+// File upload
+.input--file{
+	position: relative;
+	margin-bottom:$margin;
+	.input--warning{
+		position: absolute;
+		bottom:-2px;
+		top:auto;
+	}
+}
+.input__file {
+	width: 0.1px; height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	&.input--error ~ .input__file-label {
+		background-color:$alertColor;
+		&:hover{
+			background-color:darken($alertColor,10%);
+		}
+	}
+}
+.input__file-label{
+	@extend .button;
+}

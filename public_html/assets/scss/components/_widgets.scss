@@ -1,0 +1,29 @@
+.widget{
+	margin-top:$margin;
+}
+
+.widget--color{
+	color:$white;
+	background-color:$secondaryColor;
+	padding:20px;
+}
+
+.widget--bg-image{
+	height:180px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+}
+
+.widget__overlay-link{
+	position: relative;
+	display: block;
+}
+.widget__overlay-text{
+	background: $white;
+	position: absolute;
+	padding:4px 8px;
+	top:16px;
+	left:0;
+}

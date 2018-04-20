@@ -1,0 +1,76 @@
+$headerFontFamily: 'Open Sans', sans-serif;
+$headerFontFamily: sans-serif;
+$headerFontWeight: 700;
+$headerFontStyle: normal;
+$headerFontColor: $mainColor;
+$bodyFontFamily: 'Open Sans', sans-serif;
+$bodyFontWeight: 400;
+$bodyFontStyle: normal;
+$bodyFontColor: $txtColor;
+
+html {
+	font-size: 100%;
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+	margin: 0;
+	background: $white;
+	font-family: $bodyFontFamily;
+	font-weight: $bodyFontWeight;
+	font-style: $bodyFontStyle;
+	@include font-size($baseFontSize);
+	@include line-height($baseLineHeight, $baseFontSize);
+	color: $bodyFontColor;
+	-webkit-font-smoothing: $fontSmoothing;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $headerFontFamily;
+	font-weight: $headerFontWeight;
+	font-style: $headerFontStyle;
+	color: $headerFontColor;
+	text-rendering: optimizeLegibility;
+	line-height: normal;
+	margin: $margin-small 0;
+	&:first-child { margin-top: 0; }
+}
+
+h1 { @include font-size(42); }
+h2 { @include font-size(36); }
+h3 { @include font-size(28); }
+h4 { @include font-size(22); }
+h5 { @include font-size(18); }
+h6 { @include font-size(16); }
+
+
+p {
+	margin: $margin-small 0;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+em, i { font-style: italic; line-height: inherit; }
+strong, b { font-weight: 700; line-height: inherit; }
+small { @include font-size($baseFontSize - 4px); line-height: inherit; }
+
+blockquote {
+	margin: $margin 0;;
+	@include font-size(32); @include line-height(42, 32);
+	> small {
+		display: block;
+	}
+}
+.quote-detail{
+	@include font-size(14);
+}
+
+a {
+	color: $mainColor;
+	text-decoration: none;
+	&:hover {
+		color: darken($mainColor, 10%);
+	}
+}

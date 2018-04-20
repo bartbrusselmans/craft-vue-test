@@ -1,0 +1,93 @@
+/*
+ * cf
+ * Modern clearfix
+ */
+@mixin cf() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	*zoom: 1;
+}
+
+
+
+/*
+ * inline-list
+ * A list with items floated next to each other
+ */
+@mixin inline-list($margin: $margin) {
+	margin: 0 0 0 (-($margin));
+	padding: 0;
+	list-style: none none;
+	display: inline-block;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	*zoom: 1;
+	li {
+		list-style: none none;
+		float: left;
+		margin-left: $margin;
+		display: block;
+		> * { display: block; }
+	}
+}
+
+
+
+/*
+ * listing
+ * USed for <ul> and <ol> tags that don't need margins/paddings
+ */
+@mixin listing() {
+	margin: 0; padding: 0;
+	list-style: none none;
+}
+
+
+
+/*
+ * block-grid
+ * A grid of items
+ */
+@mixin block-grid($cols: 4) {
+	display: block;
+	margin: 0 (-($columnGutter/2)); padding: 0;
+	list-style: none none;
+	@include cf();
+	> li {
+		float: left;
+		padding: $columnGutter/2;
+		width: percentage(1/$cols);
+		&:nth-child(#{$cols}n+1) { clear: left; }
+	}
+}
+
+@mixin block-grid-mobile(){
+	@media #{$phone}{
+		> li {
+			float:none;
+			width:100%;
+		}
+	}
+}
+
+
+
+/*
+ * font-size
+ */
+@mixin font-size($sizeValue: 1.25) {
+	font-size: (strip-units($sizeValue) * 1) + px;
+	font-size: (strip-units($sizeValue) / 16) + rem;
+}
+
+
+
+@mixin line-height($sizeValue: 1.4, $fontSize : 16) {
+	line-height: (strip-units($sizeValue) / $fontSize);
+}

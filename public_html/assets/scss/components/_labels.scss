@@ -1,0 +1,21 @@
+.label {
+	display: inline-block;
+	padding: 0px 6px;
+	background: $mainColor;
+	color: $white;
+	border-radius: $default-border-radius;
+}
+.label--secondary {
+	background: $secondaryColor;
+}
+.label--alert {
+	background: $alertColor;
+}
+.label--transparent {
+	background: transparent;
+	color: $txtColor;
+}
+.label--small {
+	padding: 0px 4px;
+	@include font-size($baseFontSize - 4px);
+}

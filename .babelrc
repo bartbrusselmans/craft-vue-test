@@ -1,0 +1,10 @@
+{
+	"presets": [
+		["es2015", "stage-0"],
+		["env", {
+			"targets": {
+				"browsers": ["> .05% in BE", "not ie <= 10"]
+			}
+		}]
+	],
+}

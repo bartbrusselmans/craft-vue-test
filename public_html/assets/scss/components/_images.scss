@@ -1,0 +1,46 @@
+img {
+	max-width: 100%;
+	height: auto;
+	line-height: 1;
+	border-style:none;
+}
+
+img[alt=''],
+img:not([alt]) {
+	border:5px solid $alertColor;
+}
+
+.image{
+	border-radius: $default-border-radius;
+	overflow: hidden;
+	margin-bottom: $margin;
+}
+
+.image img{
+	width:100%;
+}
+
+.image--border {
+	border: 1px solid $borderColor;
+}
+
+.image--left{
+	float:left;
+	padding-right:20px;
+}
+
+.image--right{
+	float:right;
+	padding-left: 20px;
+}
+
+.image--full{
+	width:100%;
+}
+
+.image--right, .image--left{
+	@media #{$phone}{
+		padding:0;
+		width:100%;
+	}
+}

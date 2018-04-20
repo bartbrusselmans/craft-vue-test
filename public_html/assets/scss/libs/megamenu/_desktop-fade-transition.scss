@@ -1,0 +1,20 @@
+@media ($mega-menu-bp1) {
+    /**
+     * 1. Fix issue in Safari. Text changes when opening sub menu's.
+     */
+    .menu__sub,
+    .menu__mega {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s, visibility 0s .3s;
+        will-change: opacity; /* 1 */
+
+        .menu__item:hover > &,
+        &.is-active {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity .3s;
+        }
+    }
+}

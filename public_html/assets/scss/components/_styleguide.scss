@@ -1,0 +1,71 @@
+
+.styleguide-header{
+	padding:25px 40px;
+	background: $styleguideGrey;
+	margin-bottom:30px;
+}
+.styleguide-title{
+	@include font-size(20);
+	margin:0;
+}
+
+.styleguide-nav__link{
+	display: block;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+	text-transform: capitalize;
+	&.active, &:hover{
+		color:$white;
+		background:$mainColor;
+	}
+}
+
+.styleguide-subnav{
+	padding-bottom: 10px;
+	border-bottom: 1px solid $styleguideGrey;
+	margin-bottom: 20px;
+}
+.styleguide-subnav__list{
+	@include inline-list();
+}
+
+.styleguide-icon-list{
+	svg{
+		height:50px;
+		margin-top:10px;
+		max-width:85%;
+	}
+}
+
+.styleguide-color-block{
+	width:100%;
+	height:100px;
+}
+
+.styleguide-font-description{
+	@include font-size(14);
+}
+
+.styleguide-row{
+	color:$white;
+	margin-bottom:1rem;
+	background-color:lighten($mainColor,15%);
+	> .columns{
+		background-color:lighten($mainColor, 15%);
+	}
+}
+.styleguide-columns{
+	padding: 10px;
+  display: inline-block;
+  width: 100%;
+	background-color:$mainColor;
+}
+
+pre.line-numbers{
+	@include font-size(13);
+	max-height: 350px;
+	& > code{
+		tab-size:2;
+	}
+}

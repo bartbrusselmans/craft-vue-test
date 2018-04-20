@@ -1,0 +1,29 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jquery": true
+  },
+  "extends": "airbnb",
+  "settings": {
+    "webpack": {
+        config: 'webpack/webpack.config.babel.js'
+      },
+  },
+  "rules": {
+    "max-len": ["error", { "code": 150 }],
+    "comma-dangle": 0,
+    "no-unused-vars": 1,
+    "no-new": 0,
+    "indent": ["error", "tab"],
+    "no-param-reassign": [2, { "props": false }],
+    "no-restricted-syntax": 0,
+    "no-tabs": 0,
+    "guard-for-in": 0,
+    "class-methods-use-this": 1
+  },
+  "globals": {
+    "Expo": false,
+    "Circ": false
+  }
+}

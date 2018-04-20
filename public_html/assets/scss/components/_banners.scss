@@ -1,0 +1,61 @@
+// Cookie banner
+.cookie-banner {
+	background-color: $white;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
+	padding: 25px 0;
+	border-top: 1px solid darken($white, 10%);
+	display: none;
+	max-height:0;
+	transition:.5s ease-in-out;
+	&.active{
+		display: block;
+		max-height: 500px;
+	}
+}
+.cookie-banner__text{
+	float: left;
+	max-width: 80%;
+	@media #{$phabletAndSmaller}{
+		max-width: 100%;
+	}
+}
+.cookie-banner__button{
+	float:right;
+	margin-left: 10px;
+	position: relative;
+	top: 5px;
+	@media #{$phabletAndSmaller}{
+		float:left;
+		margin-left:0;
+	}
+	@media #{$phone}{
+		margin-bottom:60px;
+	}
+}
+
+// Promo banner
+.notification{
+	background-color: darken($white, 10%);
+	text-align: center;
+	color: $black;
+	font-weight: 600;
+	max-height: 0;
+	transition:.5s ease-in-out;
+	overflow: hidden;
+	&.active{
+		max-height: 500px;
+	}
+}
+.notification__text{
+	padding:1rem 0;
+}
+.notification__link{
+	color:$mainColor;
+	text-decoration: underline;;
+}
+.notification__close{
+	color: $white; margin-left: 25px;
+}

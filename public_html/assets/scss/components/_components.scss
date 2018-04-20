@@ -1,0 +1,411 @@
+/*
+**** =img
+**** Responsive images
+** */
+
+.leaflet-shadow-pane img { max-width: none; }
+
+hr {
+	height: 1px;
+	border:0;
+	border-top: 1px solid $borderColor;
+	margin: $margin 0;
+	display: block;
+	padding: 0;
+	box-sizing: content-box;
+	overflow: visible;
+}
+
+figure { margin: 0; }
+
+.code--block {
+	display: block;
+	margin: $margin 0;padding: $columnGutter/2;
+}
+
+
+/*
+**** =.hero
+**** Hero
+** */
+.hero--no-image{
+	min-height:400px;
+}
+.hero__image{
+	position: relative;
+	min-height:600px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@media #{$phabletAndSmaller}{
+		min-height: 400px;
+	}
+}
+.hero__text{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform:translateX(-50%) translateY(-50%);
+	text-align: center;
+	color:$white;
+}
+.hero__title{
+	color:$white;
+}
+
+
+/*
+**** =.cta
+**** Call-to-Action
+** */
+.cta{
+	display: flex;
+}
+.cta__text{
+	width:60%;
+}
+.cta__image{
+	width: 40%;
+}
+
+/*
+**** =.content-block
+**** Content blocks
+** */
+
+.content-block{
+	position: relative;
+	width:100%;
+	margin:$margin 0;
+	&:after{
+		content: " ";
+		display: block;
+		clear: both;
+	}
+}
+
+
+
+/*
+**** =.body--text, .body--intro
+**** Styling for rich text fields
+- Styled Ul's
+** */
+
+.body {
+	margin: $margin 0;
+}
+.body--intro {
+	@include font-size(24);
+}
+.body--text {
+	ul{
+		@extend .basic-list
+	}
+}
+
+
+.basic-list{
+	padding-left:20px;
+	li{
+		position: relative;
+		list-style-type: none;
+		$top: $baseLineHeight/2;
+		&:before{
+			content:'';
+			position: absolute;
+			top:$top + unquote("px");;
+			left: - 20px;
+			background-color:$mainColor;
+			border-radius: 50%;
+			width:5px;
+			height: 5px;
+		}
+	}
+}
+
+
+/*
+**** =.media
+**** General media block,
+**** http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+** */
+.media {
+	&, .media__bd {
+		overflow:hidden;
+		_overflow:visible;
+		zoom:1;
+	}
+}
+.media__img {
+	float:left;
+	margin-right: $columnGutter/2;
+	img { display: block; }
+}
+.media__img--ext {
+	float:right;
+	margin-left:
+	$columnGutter;
+}
+.media-wrapper{
+	width:100%;
+	display: inline-block;
+	&:after{
+		clear:both;
+	}
+}
+.media--inline{
+	width:50%;
+	float:left;
+}
+
+	/*
+	 * =.pagination
+	 * A good default set of styles for pagination
+	*/
+
+.flyout__wrapper{
+	position: relative;
+}
+.flyout__button{
+	display: inline-block;
+	margin: 0;
+	outline: none;
+	padding: (($button-height - $baseLineHeight) / 2) 13px;
+	background: transparent;
+	border: none;
+	@include font-size($baseFontSize);
+	@include line-height($baseLineHeight, $baseFontSize);
+	transition: background .15s, ease-in-out, color .15s, ease-in-out;
+	cursor: pointer;
+	&.active {
+		background: darken($mainColor, 10%);
+		color: $white;
+	}
+}
+.flyout{
+	background-color:$white;
+	box-shadow:2px 2px 15px rgba(0,0,0,.1);
+	position: absolute;
+	top:100%;
+	right: 0;
+	z-index: 1;
+	display: none;
+	width: 150px;
+	text-align: left;
+	padding: 10px;
+	&.active{
+		display: block;
+	}
+}
+
+
+/*
+ * =.pagination
+ * A good default set of styles for pagination
+*/
+.pagination {
+	margin-bottom: $margin;
+}
+.pagination__list {
+	@include inline-list(15px);
+	.pagination.text--center & {
+		display: inline-block;
+	}
+}
+.pagination__link {
+	display: inline-block;
+	padding: ((($button-height - 2) - $baseLineHeight) / 2) 0;
+	min-width: $button-height;
+	border-radius: $default-border-radius;
+	color: $txtColor;
+	font-weight: 700;
+	text-align: center;
+	.pagination__item--active &, &:hover {
+		background: lighten($mainColor, 40%);
+		color: $txtColor;
+	}
+}
+
+
+
+/*
+ * =.breadcrumbs
+ * A good default set of styles for pagination
+*/
+.breadcrumbs {
+	margin-bottom: $margin;
+}
+.breadcrumbs__list {
+	@include inline-list(5px);
+}
+.breadcrumbs__item:not(:last-child) {
+	&:after {
+		content: '\002F';
+		display: inline-block;
+		margin-left: 5px;
+	}
+}
+.breadcrumbs__link {
+	float: left;
+	.breadcrumbs__item--active & {
+		color: $txtColor;
+	}
+}
+
+/*
+ * =Responsive table
+ */
+table {
+	border: 1px solid $borderColor;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+
+table caption {
+font-size: 1.5em;
+margin: .5em 0 .75em;
+}
+table tr {
+	background:transparent;
+	border: 1px solid $borderColor;
+	padding: .35em;
+}
+table th,
+table td {
+	text-align: center;
+}
+table td{
+	padding:12px 5px;
+}
+table th {
+	padding:16px;
+	font-size: .85em;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+}
+@media #{$phone} {
+	table {
+		border: 0;
+	}
+	table caption {
+		font-size: 1.3em;
+	}
+	table thead {
+		border: none;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+	table tr {
+		border-bottom: 3px solid $borderColor;
+		display: block;
+		margin-bottom: .625em;
+	}
+	table td {
+		border-bottom: 1px solid $borderColor;
+		display: block;
+		font-size: .8em;
+		text-align: right;
+	}
+	table td:before {
+		/*
+		* aria-label has no advantage, it won't be read inside a table
+		content: attr(aria-label);
+		*/
+		content: attr(data-label);
+		float: left;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	table td:last-child {
+		border-bottom: 0;
+	}
+}
+/*
+ * =.tabs
+ * ...
+ */
+.tabs {
+
+}
+.tabs__navigation {
+	@include inline-list(5px);
+	margin-bottom: $margin;
+}
+.tabs__link {
+	margin: 0;
+	.tabs__item--active & {
+		text-decoration: underline;
+	}
+}
+.tabs__tab {
+	display: none;
+}
+.tabs__tab--active {
+	display: block;
+}
+
+
+/*
+ * =.modal
+ * ...
+ */
+.modal {
+	position: relative;
+	background: $white;
+	padding:$columnGutter/2;
+	width: auto;
+	max-width: $rowWidth;
+	margin: $margin auto;
+}
+
+
+
+/*
+ * =.banner
+ * ...
+ */
+.banner {
+	margin: 0 0 $margin; padding: $columnGutter/2;
+	border-radius: $default-border-radius;
+	border: 1px solid $borderColor;
+}
+.banner--errors {
+	border-color: $alertColor;
+	color: $alertColor;
+}
+.banner--main {
+	border-color: $mainColor;
+	color: $mainColor;
+}
+.banner--secondary {
+	border-color: $secondaryColor;
+	color: $secondaryColor;
+}
+.banner__error-list {
+	@include listing();
+}
+
+
+
+@import "helper-classes";
+@import "forms";
+@import "buttons";
+@import "block-grid";
+@import "video-embed";
+@import "images";
+@import "labels";
+@import "widgets";
+@import "styleguide";
+@import "mobileMenu";
+@import "landing";
+@import "footer";
+@import "banners";
+@import "map";
