@@ -15,7 +15,7 @@
 
 {% block main %}
 	<h1>Craft 3 - Ow yeah</h1>
-	{% profile "images" %}
+	{# {% profile "images" %}
 		{% set img = test.image[0] ?? null %}
 		{% set transform = img.transformImage  %}
 		{% if transform %}
@@ -26,5 +26,5 @@
 				class="lazyload"
 			/>
 		{% endif %}
-	{% endprofile %}
+	{% endprofile %} #}
 {% endblock %}
