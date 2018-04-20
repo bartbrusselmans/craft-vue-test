@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "74f46eca377ae14d23fe4008c5517851",
+    "content-hash": "9121498793cecb6359a453c937b0e080",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -2640,79 +2640,6 @@
             "time": "2015-10-13T18:44:15+00:00"
         },
         {
-            "name": "solspace/craft3-commons",
-            "version": "1.0.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/solspace/craft3-commons.git",
-                "reference": "1039f6a40ff1465cf2795ed1b43ddfd86f5108b8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-commons/zipball/1039f6a40ff1465cf2795ed1b43ddfd86f5108b8",
-                "reference": "1039f6a40ff1465cf2795ed1b43ddfd86f5108b8",
-                "shasum": ""
-            },
-            "require": {
-                "monolog/monolog": "^1.23.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Solspace\\Commons\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Solspace Commons Library for Craft CMS 3 plugins",
-            "time": "2018-04-05T06:35:14+00:00"
-        },
-        {
-            "name": "solspace/craft3-freeform-pro",
-            "version": "2.0.0-beta.16",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/solspace/craft3-freeform-pro.git",
-                "reference": "be440b2f378633cb9d18ce785542a2d5361f5e53"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform-pro/zipball/be440b2f378633cb9d18ce785542a2d5361f5e53",
-                "reference": "be440b2f378633cb9d18ce785542a2d5361f5e53",
-                "shasum": ""
-            },
-            "require": {
-                "solspace/craft3-commons": "^1.0.8"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "schemaVersion": "2.0.2",
-                "handle": "freeform-pro",
-                "class": "Solspace\\FreeformPro\\FreeformPro",
-                "name": "Freeform Pro",
-                "developer": "Solspace",
-                "developerUrl": "https://solspace.com/craft/freeform",
-                "documentationUrl": "https://solspace.com/craft/freeform/docs",
-                "changelogUrl": "https://raw.githubusercontent.com/solspace/craft3-freeform-pro/master/CHANGELOG.md"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Solspace\\FreeformPro\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Solspace",
-                    "homepage": "https://solspace.com/"
-                }
-            ],
-            "description": "Adds API integrations, premium field types, advanced exporting and widgets to Freeform.",
-            "time": "2018-04-11T18:21:28+00:00"
-        },
-        {
             "name": "sunra/php-simple-html-dom-parser",
             "version": "v1.5.2",
             "source": {
@@ -3915,8 +3842,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "nystudio107/craft-seomatic": 10,
-        "solspace/craft3-freeform-pro": 10
+        "nystudio107/craft-seomatic": 10
     },
     "prefer-stable": false,
     "prefer-lowest": false,
