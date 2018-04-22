@@ -140,7 +140,7 @@ return [
     // Active image variant creators
     'activeImageVariantCreators' => [
         'jpg' => [
-            'gd',
+            'cwebp',
         ],
         'png' => [
             'cwebp',
