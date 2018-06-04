@@ -15,7 +15,6 @@
 
 {% block main %}
 	<h1>Craft 3 - Ow yeah</h1>
-	{% profile "images" %}
 		{% set img = test.image[0] ?? null %}
 		{% set transform = img.transformImage  %}
 		{% if transform %}
@@ -38,5 +37,4 @@
 						width="100%">
 			</picture>
 		{% endif %}
-	{% endprofile %}
 {% endblock %}

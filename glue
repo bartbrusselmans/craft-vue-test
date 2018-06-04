@@ -4,16 +4,19 @@
 
 /*
   Glue Setup Script
+
+  - Installes composer dependencies
+  - Creates .env.php with correct credentials
+  - Updates the Craft security key
+  - Set remote url to the correct Repository
+
 */
 
 // TODO:
-// - Fallback if set remote doesn't work
-// - Rename current working folder
 // - Database import
 
-// $currentDir = getcwd();
-// $position = strrpos($path,'/') + 1;
-// echo $position;
+// Install dependencies
+exec("composer install");
 
 // Get Details
 echo "Repository name:";
@@ -64,11 +67,9 @@ file_put_contents($config,$content);
 echo "Setting remote url \n";
 exec("git remote set-url origin git@gluewebdesign.git.beanstalkapp.com:/gluewebdesign/" . $repoName ."git");
 
-// Install dependencies
-exec("composer install");
-
-// Rename current folder
-rename("../craft3-bash","../" . $repoName);
+// Rename current folder --> Removed
+// $currentDir = getcwd();
+// rename("../". basename($currentDir), "../" . $repoName);
 
 // Ready, good to go!
 echo("Setup complete \n");
