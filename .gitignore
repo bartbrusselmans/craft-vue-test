@@ -82,6 +82,7 @@ bower_components
 ### CraftCMS 3 ###
 /.env
 /.idea
+/.env.php
 /vendor
 
 ### Our uploads ###

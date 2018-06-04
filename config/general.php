@@ -13,10 +13,16 @@ return [
         'defaultWeekStartDay' => 1,
         // Generate transform before
         'generateTransformsBeforePageLoad' => true,
+				// The highest number Craft will tack onto a slug in order to make it unique before giving up and throwing an error.
+				'maxSlugIncrement' => 1000,
         // Enable CSRF Protection (recommended)
         'enableCsrfProtection' => true,
         // Whether "index.php" should be visible in URLs
         'omitScriptNameInUrls' => true,
+				// The maximum amount of memory Craft will try to reserve during memory intensive operations such as zipping, unzipping and updating.
+				'phpMaxMemoryLimit' => '512M',
+				// any uploaded file names will have multi-byte characters (Chinese, Japanese, etc.) stripped and any high-ASCII characters converted to their low ASCII counterparts (i.e. ñ → n).
+				'convertFilenamesToAscii' => true,
         // Control Panel trigger word
         'cpTrigger' => 'admin',
 				// siteUrl

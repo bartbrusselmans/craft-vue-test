@@ -1,0 +1,74 @@
+#!/usr/bin/env php
+
+<?php
+
+/*
+  Glue Setup Script
+*/
+
+// TODO:
+// - Fallback if set remote doesn't work
+// - Rename current working folder
+// - Database import
+
+// $currentDir = getcwd();
+// $position = strrpos($path,'/') + 1;
+// echo $position;
+
+// Get Details
+echo "Repository name:";
+$repoName = trim(fgets(STDIN, 1024));
+echo "Server:";
+$ip = trim(fgets(STDIN,1024));
+echo "Database user:";
+$user = trim(fgets(STDIN,1024));
+echo "Database name:";
+$dbName = trim(fgets(STDIN,1024));
+echo "Database password:";
+$pwd = trim(fgets(STDIN,1024));
+
+// Create Storage folder if it doesn't exist
+if (!file_exists('./storage')) {
+  mkdir('./storage', 0777, true);
+}
+// Create new Security Key
+echo "Press 'y' to confirm \n";
+exec("./craft setup/security-key");
+// Read value from key and use it and store it
+$envFile = "./.env";
+$key = file_get_contents($envFile);
+// Cleanup Key
+preg_match_all('/"([^"]+)"/', $key, $match);
+$newKey = implode(', ', $match[1]);
+// Delet original php file
+unlink("./.env");
+
+// Copy the example file and rename to .env.php
+$exampleFile = './_example.env.php';
+$envFile = './.env.php';
+if (!copy($exampleFile, $envFile)) {
+    echo "failed to copy example file \n";
+}
+// Update the config file
+echo "Creating config \n";
+$config = "./.env.php";
+$content = file_get_contents($config);
+$content = str_replace('$ip',$ip,$content);
+$content = str_replace('$user',$user,$content);
+$content = str_replace('$db',$dbName,$content);
+$content = str_replace('$pwd',$pwd,$content);
+$content = str_replace('$key',$cleanKey,$content);
+file_put_contents($config,$content);
+
+// Set remote url to Repo name
+echo "Setting remote url \n";
+exec("git remote set-url origin git@gluewebdesign.git.beanstalkapp.com:/gluewebdesign/" . $repoName ."git");
+
+// Install dependencies
+exec("composer install");
+
+// Rename current folder
+rename("../craft3-bash","../" . $repoName);
+
+// Ready, good to go!
+echo("Setup complete \n");

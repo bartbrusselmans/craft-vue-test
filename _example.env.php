@@ -35,16 +35,16 @@ $craftEnvVars = [
     'DB_DRIVER' => 'mysql',
 
     // The database server name or IP address (usually this is 'localhost' or '127.0.0.1')
-    'DB_SERVER' => 'localhost',
+    'DB_SERVER' => '$ip',
 
     // The database username to connect with
-    'DB_USER' => 'root',
+    'DB_USER' => '$user',
 
     // The database password to connect with
-    'DB_PASSWORD' => 'root',
+    'DB_PASSWORD' => '$pwd',
 
     // The name of the database to select
-    'DB_DATABASE' => 'cr_c3boilerplate',
+    'DB_DATABASE' => '$db',
 
     // The database schema that will be used (PostgreSQL only, usually 'public')
     'DB_SCHEMA' => 'public',
@@ -58,7 +58,7 @@ $craftEnvVars = [
 
     // The secure key Craft will use for hashing and encrypting data, see:
     // https://craftcms.com/docs/config-settings#validationKey
-    'SECURITY_KEY' => '',
+    'SECURITY_KEY' => '$key',
 
     // The site url to use; it can be hard-coded as well
     'SITE_URL' => $protocol . $httpHost . '/',
