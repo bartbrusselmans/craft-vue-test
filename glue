@@ -5,15 +5,16 @@
 /*
   Glue Setup Script
 
-  - Installes composer dependencies
-  - Creates .env.php with correct credentials
-  - Updates the Craft security key
+  - Install composer dependencies
+  - Create .env.php with all credentials
+  - Generate new Craft security key
   - Set remote url to the correct Repository
+
+	// TODO:
+	// - Database import from repo
 
 */
 
-// TODO:
-// - Database import
 
 // Install dependencies
 exec("composer install");
@@ -43,7 +44,7 @@ $key = file_get_contents($envFile);
 // Cleanup Key
 preg_match_all('/"([^"]+)"/', $key, $match);
 $newKey = implode(', ', $match[1]);
-// Delet original php file
+// Delet original .env file
 unlink("./.env");
 
 // Copy the example file and rename to .env.php
@@ -60,7 +61,7 @@ $content = str_replace('$ip',$ip,$content);
 $content = str_replace('$user',$user,$content);
 $content = str_replace('$db',$dbName,$content);
 $content = str_replace('$pwd',$pwd,$content);
-$content = str_replace('$key',$cleanKey,$content);
+$content = str_replace('$securityKey',$newKey,$content);
 file_put_contents($config,$content);
 
 // Set remote url to Repo name
