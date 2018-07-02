@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9121498793cecb6359a453c937b0e080",
+    "content-hash": "5186f176b308772f275f7792ea5b93ff",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -310,16 +310,16 @@
         },
         {
             "name": "composer/spdx-licenses",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/spdx-licenses.git",
-                "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30"
+                "reference": "cb17687e9f936acd7e7245ad3890f953770dec1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/7e111c50db92fa2ced140f5ba23b4e261bc77a30",
-                "reference": "7e111c50db92fa2ced140f5ba23b4e261bc77a30",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/cb17687e9f936acd7e7245ad3890f953770dec1b",
+                "reference": "cb17687e9f936acd7e7245ad3890f953770dec1b",
                 "shasum": ""
             },
             "require": {
@@ -367,7 +367,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2018-01-31T13:17:27+00:00"
+            "time": "2018-04-30T10:33:04+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -402,16 +402,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.3.1",
+            "version": "3.0.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "6855a5f1c83205f1506aeb5a610964c58e67ca87"
+                "reference": "cadc71477c3e64a93038a900ea34877163d0af51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/6855a5f1c83205f1506aeb5a610964c58e67ca87",
-                "reference": "6855a5f1c83205f1506aeb5a610964c58e67ca87",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/cadc71477c3e64a93038a900ea34877163d0af51",
+                "reference": "cadc71477c3e64a93038a900ea34877163d0af51",
                 "shasum": ""
             },
             "require": {
@@ -420,7 +420,7 @@
                 "craftcms/plugin-installer": "~1.5.0",
                 "craftcms/server-check": "~1.1.0",
                 "creocoder/yii2-nested-sets": "~0.9.0",
-                "danielstjules/stringy": "~3.1.0",
+                "danielstjules/stringy": "^3.1.0",
                 "elvanto/litemoji": "^1.3.1",
                 "enshrined/svg-sanitize": "~0.8.2",
                 "ext-curl": "*",
@@ -431,19 +431,19 @@
                 "ext-pcre": "*",
                 "ext-pdo": "*",
                 "ext-zip": "*",
-                "guzzlehttp/guzzle": "~6.3.0",
-                "league/flysystem": "~1.0.35",
-                "league/oauth2-client": "~2.2.1",
-                "mikehaertl/php-shellcommand": "~1.2.5",
+                "guzzlehttp/guzzle": "^6.3.0",
+                "league/flysystem": "^1.0.35",
+                "league/oauth2-client": "^2.2.1",
+                "mikehaertl/php-shellcommand": "^1.2.5",
                 "php": ">=7.0.0",
                 "pixelandtonic/imagine": "~0.7.1.2",
-                "seld/cli-prompt": "~1.0.3",
-                "twig/twig": "~2.4.4",
+                "seld/cli-prompt": "^1.0.3",
+                "twig/twig": "^2.4.4",
                 "yiisoft/yii2": "~2.0.15.1",
-                "yiisoft/yii2-debug": "~2.0.10",
-                "yiisoft/yii2-queue": "~2.0.1",
-                "yiisoft/yii2-swiftmailer": "~2.1.0",
-                "zendframework/zend-feed": "~2.8.0"
+                "yiisoft/yii2-debug": "^2.0.10",
+                "yiisoft/yii2-queue": "^2.0.1",
+                "yiisoft/yii2-swiftmailer": "^2.1.0",
+                "zendframework/zend-feed": "^2.8.0"
             },
             "provide": {
                 "bower-asset/bootstrap": "3.3.* | 3.2.* | 3.1.*",
@@ -453,7 +453,7 @@
                 "bower-asset/yii2-pjax": "~2.0.1"
             },
             "require-dev": {
-                "codeception/codeception": "~2.3.3",
+                "codeception/codeception": "^2.4",
                 "codeception/mockery-module": "~0.2.2",
                 "codeception/specify": "~0.4.6",
                 "codeception/verify": "~0.3.3"
@@ -480,7 +480,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2018-04-18T13:58:37+00:00"
+            "time": "2018-06-27T13:28:26+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -911,16 +911,16 @@
         },
         {
             "name": "elvanto/litemoji",
-            "version": "1.3.1",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elvanto/litemoji.git",
-                "reference": "fc1d2b8b3d174ee9425ac506430377dc3b50cdfb"
+                "reference": "7c0276dd0e5004bc78b7865e12030f3d2b6b8d0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elvanto/litemoji/zipball/fc1d2b8b3d174ee9425ac506430377dc3b50cdfb",
-                "reference": "fc1d2b8b3d174ee9425ac506430377dc3b50cdfb",
+                "url": "https://api.github.com/repos/elvanto/litemoji/zipball/7c0276dd0e5004bc78b7865e12030f3d2b6b8d0e",
+                "reference": "7c0276dd0e5004bc78b7865e12030f3d2b6b8d0e",
                 "shasum": ""
             },
             "require": {
@@ -945,7 +945,7 @@
                 "emoji",
                 "php-emoji"
             ],
-            "time": "2017-10-09T01:54:36+00:00"
+            "time": "2018-05-25T04:37:05+00:00"
         },
         {
             "name": "enshrined/svg-sanitize",
@@ -1033,16 +1033,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.3.2",
+            "version": "6.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90"
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/68d0ea14d5a3f42a20e87632a5f84931e2709c90",
-                "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
                 "shasum": ""
             },
             "require": {
@@ -1052,7 +1052,7 @@
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
                 "psr/log": "^1.0"
             },
             "suggest": {
@@ -1094,7 +1094,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-03-26T16:33:04+00:00"
+            "time": "2018-04-22T15:46:56+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1419,16 +1419,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.44",
+            "version": "1.0.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "168dbe519737221dc87d17385cde33073881fd02"
+                "reference": "a99f94e63b512d75f851b181afcdf0ee9ebef7e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/168dbe519737221dc87d17385cde33073881fd02",
-                "reference": "168dbe519737221dc87d17385cde33073881fd02",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a99f94e63b512d75f851b181afcdf0ee9ebef7e6",
+                "reference": "a99f94e63b512d75f851b181afcdf0ee9ebef7e6",
                 "shasum": ""
             },
             "require": {
@@ -1499,33 +1499,33 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2018-04-06T09:58:14+00:00"
+            "time": "2018-05-07T08:44:23+00:00"
         },
         {
             "name": "league/oauth2-client",
-            "version": "2.2.1",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-client.git",
-                "reference": "313250eab923e673a5c0c8f463f443ee79f4383f"
+                "reference": "aa2e3df188f0bfd87f7880cc880e906e99923580"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/313250eab923e673a5c0c8f463f443ee79f4383f",
-                "reference": "313250eab923e673a5c0c8f463f443ee79f4383f",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/aa2e3df188f0bfd87f7880cc880e906e99923580",
+                "reference": "aa2e3df188f0bfd87f7880cc880e906e99923580",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.0",
                 "paragonie/random_compat": "^1|^2",
-                "php": ">=5.6.0"
+                "php": "^5.6|^7.0"
             },
             "require-dev": {
                 "eloquent/liberator": "^2.0",
-                "eloquent/phony": "^0.14.1",
-                "jakub-onderka/php-parallel-lint": "~0.9",
-                "phpunit/phpunit": "^5.0",
-                "squizlabs/php_codesniffer": "^2.0"
+                "eloquent/phony-phpunit": "^1.0|^3.0",
+                "jakub-onderka/php-parallel-lint": "^0.9.2",
+                "phpunit/phpunit": "^5.7|^6.0",
+                "squizlabs/php_codesniffer": "^2.3|^3.0"
             },
             "type": "library",
             "extra": {
@@ -1566,20 +1566,20 @@
                 "oauth2",
                 "single sign on"
             ],
-            "time": "2017-04-25T14:43:14+00:00"
+            "time": "2018-01-13T05:27:58+00:00"
         },
         {
             "name": "mikehaertl/php-shellcommand",
-            "version": "1.2.5",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikehaertl/php-shellcommand.git",
-                "reference": "35a81f344bd771b0b1c1ae3f4dc986dddfd234b9"
+                "reference": "727e2143578796c714a50c0a350459758ff16c43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikehaertl/php-shellcommand/zipball/35a81f344bd771b0b1c1ae3f4dc986dddfd234b9",
-                "reference": "35a81f344bd771b0b1c1ae3f4dc986dddfd234b9",
+                "url": "https://api.github.com/repos/mikehaertl/php-shellcommand/zipball/727e2143578796c714a50c0a350459758ff16c43",
+                "reference": "727e2143578796c714a50c0a350459758ff16c43",
                 "shasum": ""
             },
             "type": "library",
@@ -1602,7 +1602,7 @@
             "keywords": [
                 "shell"
             ],
-            "time": "2017-06-30T06:21:01+00:00"
+            "time": "2018-02-16T07:02:50+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1905,16 +1905,16 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.4.30",
+            "version": "1.4.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "37555313a35057459fd2c55de66ea706e06e75b0"
+                "reference": "16bd3098f4eaefb4bb3e750cbda23ff1a6ba9178"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/37555313a35057459fd2c55de66ea706e06e75b0",
-                "reference": "37555313a35057459fd2c55de66ea706e06e75b0",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/16bd3098f4eaefb4bb3e750cbda23ff1a6ba9178",
+                "reference": "16bd3098f4eaefb4bb3e750cbda23ff1a6ba9178",
                 "shasum": ""
             },
             "require": {
@@ -1965,7 +1965,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2018-04-09T16:06:39+00:00"
+            "time": "2018-05-24T22:56:06+00:00"
         },
         {
             "name": "nystudio107/craft-minify",
@@ -2025,16 +2025,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.0.0",
+            "version": "3.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "6fb1a5abaabca14814077528909b8e64cfaaea16"
+                "reference": "97ffc1a58794297015b62330ebff031c4de11241"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/6fb1a5abaabca14814077528909b8e64cfaaea16",
-                "reference": "6fb1a5abaabca14814077528909b8e64cfaaea16",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/97ffc1a58794297015b62330ebff031c4de11241",
+                "reference": "97ffc1a58794297015b62330ebff031c4de11241",
                 "shasum": ""
             },
             "require": {
@@ -2084,12 +2084,19 @@
             "description": "SEOmatic facilitates modern SEO best practices & implementation for Craft CMS 3. It is a turnkey SEO system that is comprehensive, powerful, and flexible.",
             "keywords": [
                 "Craft",
+                "JSON-LD",
+                "Sitemap",
                 "cms",
                 "craft-plugin",
                 "craftcms",
-                "seomatic"
+                "facebook",
+                "meta",
+                "seo",
+                "seomatic",
+                "tags",
+                "twitter"
             ],
-            "time": "2018-04-17T18:07:31+00:00"
+            "time": "2018-06-25T17:40:58+00:00"
         },
         {
             "name": "nystudio107/craft-twigprofiler",
@@ -2147,16 +2154,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.12",
+            "version": "v2.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb"
+                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/10bcb46e8f3d365170f6de9d05245aa066b81f09",
+                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09",
                 "shasum": ""
             },
             "require": {
@@ -2188,10 +2195,11 @@
             "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
             "keywords": [
                 "csprng",
+                "polyfill",
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-04-04T21:24:14+00:00"
+            "time": "2018-06-08T15:26:40+00:00"
         },
         {
             "name": "php-science/textrank",
@@ -2640,6 +2648,63 @@
             "time": "2015-10-13T18:44:15+00:00"
         },
         {
+            "name": "studioespresso/craft-navigate",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/studioespresso/craft3-navigate.git",
+                "reference": "6dacdc2f74d5b5ae1172c78af83015e4b56026bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/studioespresso/craft3-navigate/zipball/6dacdc2f74d5b5ae1172c78af83015e4b56026bb",
+                "reference": "6dacdc2f74d5b5ae1172c78af83015e4b56026bb",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Navigate",
+                "handle": "navigate",
+                "hasCpSettings": true,
+                "hasCpSection": true,
+                "changelogUrl": "https://raw.githubusercontent.com/studioespresso/craft3-navigate/master/CHANGELOG.md",
+                "components": {
+                    "navigate": "studioespresso\\navigate\\services\\NavigateService",
+                    "nodes": "studioespresso\\navigate\\services\\NodesService"
+                },
+                "class": "studioespresso\\navigate\\Navigate"
+            },
+            "autoload": {
+                "psr-4": {
+                    "studioespresso\\navigate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Studio Espresso",
+                    "homepage": "https://studioespresso.co"
+                }
+            ],
+            "description": "Navigation plugin for Craft 3",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "menus",
+                "navigate",
+                "navigation"
+            ],
+            "time": "2018-07-01T09:29:11+00:00"
+        },
+        {
             "name": "sunra/php-simple-html-dom-parser",
             "version": "v1.5.2",
             "source": {
@@ -2967,16 +3032,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b"
+                "reference": "3296adf6a6454a050679cde90f95350ad604b171"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/78be803ce01e55d3491c1397cf1c64beb9c1b63b",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/3296adf6a6454a050679cde90f95350ad604b171",
+                "reference": "3296adf6a6454a050679cde90f95350ad604b171",
                 "shasum": ""
             },
             "require": {
@@ -2988,7 +3053,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -3022,7 +3087,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/process",
@@ -3248,28 +3313,28 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v2.4.0",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
+                "reference": "6ae3e2e6494bb5e58c2decadafc3de7f1453f70a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
-                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/6ae3e2e6494bb5e58c2decadafc3de7f1453f70a",
+                "reference": "6ae3e2e6494bb5e58c2decadafc3de7f1453f70a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.0"
+                "phpunit/phpunit": "^4.8.35 || ^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -3279,7 +3344,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause-Attribution"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -3294,7 +3359,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-09-01T10:05:43+00:00"
+            "time": "2018-07-01T10:25:50+00:00"
         },
         {
             "name": "yiisoft/yii2",
@@ -3559,24 +3624,25 @@
         },
         {
             "name": "yiisoft/yii2-queue",
-            "version": "2.0.2",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-queue.git",
-                "reference": "8c2b337f7d9ea934c2affdfc21c9fb387d0a0773"
+                "reference": "d04b4b3c932081200876a351cc6c3502e89e11b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-queue/zipball/8c2b337f7d9ea934c2affdfc21c9fb387d0a0773",
-                "reference": "8c2b337f7d9ea934c2affdfc21c9fb387d0a0773",
+                "url": "https://api.github.com/repos/yiisoft/yii2-queue/zipball/d04b4b3c932081200876a351cc6c3502e89e11b8",
+                "reference": "d04b4b3c932081200876a351cc6c3502e89e11b8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.0",
                 "symfony/process": "*",
-                "yiisoft/yii2": "~2.0.13"
+                "yiisoft/yii2": "~2.0.14"
             },
             "require-dev": {
+                "aws/aws-sdk-php": ">=2.4",
                 "enqueue/amqp-lib": "^0.8",
                 "jeremeamia/superclosure": "*",
                 "pda/pheanstalk": "*",
@@ -3587,6 +3653,7 @@
                 "yiisoft/yii2-redis": "*"
             },
             "suggest": {
+                "aws/aws-sdk-php": "Need for aws SQS.",
                 "enqueue/amqp-lib": "Need for AMQP interop queue.",
                 "ext-gearman": "Need for Gearman queue.",
                 "ext-pcntl": "Need for process signals.",
@@ -3610,7 +3677,8 @@
                     "yii\\queue\\file\\": "src/drivers/file",
                     "yii\\queue\\gearman\\": "src/drivers/gearman",
                     "yii\\queue\\redis\\": "src/drivers/redis",
-                    "yii\\queue\\sync\\": "src/drivers/sync"
+                    "yii\\queue\\sync\\": "src/drivers/sync",
+                    "yii\\queue\\sqs\\": "src/drivers/sqs"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3623,7 +3691,7 @@
                     "email": "zhuravljov@gmail.com"
                 }
             ],
-            "description": "Yii2 Queue Extension which supported DB, Redis, RabbitMQ, Beanstalk and Gearman",
+            "description": "Yii2 Queue Extension which supported DB, Redis, RabbitMQ, Beanstalk, SQS and Gearman",
             "keywords": [
                 "async",
                 "beanstalk",
@@ -3633,22 +3701,23 @@
                 "queue",
                 "rabbitmq",
                 "redis",
+                "sqs",
                 "yii"
             ],
-            "time": "2017-12-26T17:16:14+00:00"
+            "time": "2018-05-23T21:04:57+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-swiftmailer.git",
-                "reference": "563570c9aa19ca47c1b22e3032983229378e9274"
+                "reference": "fd917fbe63b7ea796c52902143b83b98e65bfb73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/563570c9aa19ca47c1b22e3032983229378e9274",
-                "reference": "563570c9aa19ca47c1b22e3032983229378e9274",
+                "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/fd917fbe63b7ea796c52902143b83b98e65bfb73",
+                "reference": "fd917fbe63b7ea796c52902143b83b98e65bfb73",
                 "shasum": ""
             },
             "require": {
@@ -3658,12 +3727,12 @@
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.1.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\swiftmailer\\": ""
+                    "yii\\swiftmailer\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3685,34 +3754,34 @@
                 "swiftmailer",
                 "yii2"
             ],
-            "time": "2017-08-04T10:48:17+00:00"
+            "time": "2018-04-24T23:17:42+00:00"
         },
         {
             "name": "zendframework/zend-escaper",
-            "version": "2.5.2",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-escaper.git",
-                "reference": "2dcd14b61a72d8b8e27d579c6344e12c26141d4e"
+                "reference": "31d8aafae982f9568287cb4dce987e6aff8fd074"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-escaper/zipball/2dcd14b61a72d8b8e27d579c6344e12c26141d4e",
-                "reference": "2dcd14b61a72d8b8e27d579c6344e12c26141d4e",
+                "url": "https://api.github.com/repos/zendframework/zend-escaper/zipball/31d8aafae982f9568287cb4dce987e6aff8fd074",
+                "reference": "31d8aafae982f9568287cb4dce987e6aff8fd074",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev",
-                    "dev-develop": "2.6-dev"
+                    "dev-master": "2.6.x-dev",
+                    "dev-develop": "2.7.x-dev"
                 }
             },
             "autoload": {
@@ -3724,55 +3793,56 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "homepage": "https://github.com/zendframework/zend-escaper",
+            "description": "Securely and safely escape HTML, HTML attributes, JavaScript, CSS, and URLs",
             "keywords": [
+                "ZendFramework",
                 "escaper",
-                "zf2"
+                "zf"
             ],
-            "time": "2016-06-30T19:48:38+00:00"
+            "time": "2018-04-25T15:48:53+00:00"
         },
         {
             "name": "zendframework/zend-feed",
-            "version": "2.8.0",
+            "version": "2.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-feed.git",
-                "reference": "94579e805dd108683209fe14b3b5d4276de3de6e"
+                "reference": "5253f949f4ad999086ab9b408908b6c6776f24db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-feed/zipball/94579e805dd108683209fe14b3b5d4276de3de6e",
-                "reference": "94579e805dd108683209fe14b3b5d4276de3de6e",
+                "url": "https://api.github.com/repos/zendframework/zend-feed/zipball/5253f949f4ad999086ab9b408908b6c6776f24db",
+                "reference": "5253f949f4ad999086ab9b408908b6c6776f24db",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.6 || ^7.0",
-                "zendframework/zend-escaper": "^2.5",
-                "zendframework/zend-stdlib": "^2.7 || ^3.1"
+                "zendframework/zend-escaper": "^2.5.2",
+                "zendframework/zend-stdlib": "^2.7.7 || ^3.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.0.8 || ^5.7.15",
-                "psr/http-message": "^1.0",
-                "zendframework/zend-cache": "^2.6",
+                "phpunit/phpunit": "^5.7.23 || ^6.4.3",
+                "psr/http-message": "^1.0.1",
+                "zendframework/zend-cache": "^2.7.2",
                 "zendframework/zend-coding-standard": "~1.0.0",
-                "zendframework/zend-db": "^2.7",
-                "zendframework/zend-http": "^2.5.4",
-                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
-                "zendframework/zend-validator": "^2.6"
+                "zendframework/zend-db": "^2.8.2",
+                "zendframework/zend-http": "^2.7",
+                "zendframework/zend-servicemanager": "^2.7.8 || ^3.3",
+                "zendframework/zend-validator": "^2.10.1"
             },
             "suggest": {
-                "psr/http-message": "PSR-7 ^1.0, if you wish to use Zend\\Feed\\Reader\\Http\\Psr7ResponseDecorator",
+                "psr/http-message": "PSR-7 ^1.0.1, if you wish to use Zend\\Feed\\Reader\\Http\\Psr7ResponseDecorator",
                 "zendframework/zend-cache": "Zend\\Cache component, for optionally caching feeds between requests",
                 "zendframework/zend-db": "Zend\\Db component, for use with PubSubHubbub",
                 "zendframework/zend-http": "Zend\\Http for PubSubHubbub, and optionally for use with Zend\\Feed\\Reader",
                 "zendframework/zend-servicemanager": "Zend\\ServiceManager component, for easily extending ExtensionManager implementations",
-                "zendframework/zend-validator": "Zend\\Validator component, for validating email addresses used in Atom feeds and entries ehen using the Writer subcomponent"
+                "zendframework/zend-validator": "Zend\\Validator component, for validating email addresses used in Atom feeds and entries when using the Writer subcomponent"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev",
-                    "dev-develop": "2.9-dev"
+                    "dev-master": "2.10.x-dev",
+                    "dev-develop": "2.11.x-dev"
                 }
             },
             "autoload": {
@@ -3785,40 +3855,40 @@
                 "BSD-3-Clause"
             ],
             "description": "provides functionality for consuming RSS and Atom feeds",
-            "homepage": "https://github.com/zendframework/zend-feed",
             "keywords": [
+                "ZendFramework",
                 "feed",
-                "zf2"
+                "zf"
             ],
-            "time": "2017-04-01T15:03:14+00:00"
+            "time": "2018-06-18T20:14:01+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "3.1.1",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-stdlib.git",
-                "reference": "10ef03144902d1955f935fff5346ed52f7d99bcc"
+                "reference": "cd164b4a18b5d1aeb69be2c26db035b5ed6925ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/10ef03144902d1955f935fff5346ed52f7d99bcc",
-                "reference": "10ef03144902d1955f935fff5346ed52f7d99bcc",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/cd164b4a18b5d1aeb69be2c26db035b5ed6925ae",
+                "reference": "cd164b4a18b5d1aeb69be2c26db035b5ed6925ae",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "athletic/athletic": "~0.1",
-                "phpunit/phpunit": "~4.0",
+                "phpbench/phpbench": "^0.13",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
                 "zendframework/zend-coding-standard": "~1.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev",
-                    "dev-develop": "3.2-dev"
+                    "dev-master": "3.2.x-dev",
+                    "dev-develop": "3.3.x-dev"
                 }
             },
             "autoload": {
@@ -3830,19 +3900,21 @@
             "license": [
                 "BSD-3-Clause"
             ],
-            "homepage": "https://github.com/zendframework/zend-stdlib",
+            "description": "SPL extensions, array utilities, error handlers, and more",
             "keywords": [
+                "ZendFramework",
                 "stdlib",
-                "zf2"
+                "zf"
             ],
-            "time": "2018-04-12T16:05:42+00:00"
+            "time": "2018-04-30T13:50:40+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "nystudio107/craft-seomatic": 10
+        "nystudio107/craft-seomatic": 10,
+        "studioespresso/craft-navigate": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
