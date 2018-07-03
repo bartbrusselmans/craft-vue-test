@@ -9,9 +9,9 @@ import 'element-closest';
 //	Imports
 import log from './dev-modules/log';
 import loadSvgSprite from './modules/svgSpriteLoader';
-import languageToggle from './modules/languageToggle';
-import mobileMenu from './modules/mobileMenu';
-import cookiesAndNofications from './modules/cookiesAndNotifications';
+
+import Vue from 'vue';
+import test from './App.vue';
 
 // Variablese
 const inProduction = (process.env.NODE_ENV === 'production');
@@ -34,7 +34,11 @@ App.prototype.initialPlugins = function initialPlugins() {
 		console.log('🚀 working in dev-mode');
 		log();
 	}
-	mobileMenu();
+
+	new Vue({
+		el: '#app',
+		render: h => h(test)
+	})
 };
 
 app = new App();
